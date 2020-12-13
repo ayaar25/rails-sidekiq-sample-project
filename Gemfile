@@ -9,6 +9,7 @@ gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 5.0'
 gem 'turbolinks', '~> 5'
 
+gem 'faraday', '~> 1.1'
 gem 'figaro', '~> 1.2'
 gem 'jbuilder', '~> 2.7'
 gem 'pg', '~> 1.2'
