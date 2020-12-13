@@ -10,7 +10,7 @@ A sample project to run job using Active Jobs and Sidekiq Worker
 ## Development
 - Please run the following command in your terminal
 ```bash
-docker-compose up -d
+make docker.start
 ```
 - To run the console please type
 ```bash
@@ -20,12 +20,16 @@ rails c
 ```bash
 rails s
 ```
+- To stop the running containers please type
+```bash
+make docker.stop
+```
 
 ## Test
 - To run the test please type
 ```bash
-bundle exec rspec
+make test
 ```
 
-## To-do
-- Provide Makefile
+## Note
+Please check Makefile for further available commands
