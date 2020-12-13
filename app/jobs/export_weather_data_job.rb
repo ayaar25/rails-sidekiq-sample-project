@@ -1,6 +1,8 @@
 class ExportWeatherDataJob < ApplicationJob
   queue_as :default
 
+  retry_on RuntimeError, queue: :default, attempts: 3
+
   def perform
     request = HttpRequest.new(Figaro.env.OPEN_WEATHER_BASE_URL)
 
@@ -24,5 +26,7 @@ class ExportWeatherDataJob < ApplicationJob
         end
       end
     end
+
+    raise 'Unable to fetch weather data'
   end
 end
