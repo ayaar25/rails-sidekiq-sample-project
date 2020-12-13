@@ -1,0 +1,8 @@
+# sidekiq config
+SIDEKIQ_REDIST_HOST: "localhost"
+
+# postgres config
+POSTGRESS_USER: "user"
+POSTGRESS_PASSWORD: "password"
+POSTGRESS_HOST: "localhost"
+POSTGRESS_DB: "sample_project_development"
