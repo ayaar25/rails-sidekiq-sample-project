@@ -1,24 +1,31 @@
-# README
+# Rails-Sidekiq Sample Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A sample project to run job using Active Jobs and Sidekiq Worker
 
-Things you may want to cover:
+## Prerequisite
+- ruby 2.6.3
+- bundler 1.17.2
+- docker 20.10.0
 
-* Ruby version
+## Development
+- Please run the following command in your terminal
+```bash
+docker-compose up -d
+```
+- To run the console please type
+```bash
+rails c
+```
+- To run the server please type
+```bash
+rails s
+```
 
-* System dependencies
+## Test
+- To run the test please type
+```bash
+bundle exec rspec
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## To-do
+- Provide Makefile
