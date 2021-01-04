@@ -1,9 +1,7 @@
-class ExportWeatherDataJob < ApplicationJob
-  queue_as :default
+class ExportWeatherDataWorker
+  include Sidekiq::Worker
 
-  # retry_on RuntimeError, queue: :default, attempts: 4
-
-  sidekiq_options retry: 3
+  sidekiq_options retry: 2
 
   def perform
     request = HttpRequest.new(Figaro.env.OPEN_WEATHER_BASE_URL)
